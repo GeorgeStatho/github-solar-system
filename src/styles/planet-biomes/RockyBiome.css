@@ -1,0 +1,45 @@
+/* Rocky biome */
+
+.planet-core[data-biome="rocky"] .planet-base {
+    background:
+        radial-gradient(circle at 30% 28%,
+            rgba(255,245,230,0.35) 0%,
+            rgba(255,245,230,0.08) 10%,
+            rgba(255,245,230,0.00) 22%),
+        radial-gradient(circle at 40% 36%,
+            #8b5a3c 0%,
+            #6b442c 38%,
+            #3f2a1c 72%,
+            #0b0f18 100%);
+}
+
+.planet-core[data-biome="rocky"] .planet-texture {
+    background:
+        radial-gradient(circle at 67% 39%, rgba(45, 24, 14, 0.42) 0%, transparent 12%),
+        radial-gradient(circle at 48% 63%, rgba(28, 16, 10, 0.34) 0%, transparent 16%),
+        radial-gradient(circle at 31% 36%, rgba(220, 180, 130, 0.10) 0%, transparent 18%),
+        radial-gradient(circle at 59% 76%, rgba(255, 220, 180, 0.06) 0%, transparent 12%),
+        radial-gradient(circle at 72% 54%, rgba(35, 20, 12, 0.24) 0%, transparent 10%);
+    left: -6%;
+    width: 112%;
+    height: 100%;
+    opacity: 0.70;
+    animation: rocky-dust-creep 22s linear infinite;
+}
+
+.planet-core[data-biome="rocky"] .planet-feature {
+    background:
+        radial-gradient(circle at 66% 42%, rgba(18, 10, 8, 0.42) 0%, rgba(18,10,8,0.16) 7%, transparent 13%),
+        radial-gradient(circle at 45% 63%, rgba(18, 10, 8, 0.30) 0%, transparent 12%);
+    mix-blend-mode: multiply;
+    opacity: 0.96;
+}
+
+.planet-core[data-biome="rocky"] .planet-rim-light {
+    opacity: 0.36;
+}
+
+@keyframes rocky-dust-creep {
+    0%, 100% { transform: translateX(-4%); }
+    50%      { transform: translateX(4%); }
+}

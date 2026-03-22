@@ -1,0 +1,40 @@
+/* Star biome */
+
+.planet-core[data-biome="star"] .planet-base {
+    background:
+        radial-gradient(circle at 32% 30%,
+            rgba(255,255,220,1.0) 0%,
+            rgba(255,245,160,0.92) 12%,
+            rgba(255,195,40,0.88) 38%,
+            rgba(255,120,10,0.82) 68%,
+            rgba(120,30,0,0.95) 100%);
+    box-shadow:
+        inset -12px -18px 24px rgba(120, 40, 0, 0.28),
+        0 0 28px rgba(255, 190, 40, 0.45),
+        0 0 80px rgba(255, 160, 20, 0.24);
+}
+
+.planet-core[data-biome="star"] .planet-texture {
+    background:
+        radial-gradient(circle at 36% 44%, rgba(255,255,255,0.16) 0%, transparent 14%),
+        radial-gradient(circle at 60% 52%, rgba(255,120,40,0.22) 0%, transparent 18%),
+        radial-gradient(circle at 46% 30%, rgba(255,220,80,0.16) 0%, transparent 12%);
+    opacity: 0.92;
+    animation: star-flicker 4s ease-in-out infinite;
+}
+
+.planet-core[data-biome="star"] .planet-shadow {
+    opacity: 0.82;
+}
+
+.planet-core[data-biome="star"] .planet-rim-light {
+    opacity: 1;
+}
+
+.planet-core[data-biome="star"] .planet-feature {
+    background:
+        radial-gradient(circle at 20% 52%, rgba(255,240,150,0.24) 0%, transparent 16%),
+        radial-gradient(circle at 74% 32%, rgba(255,160,40,0.16) 0%, transparent 14%);
+    mix-blend-mode: screen;
+    animation: star-flicker-2 6s ease-in-out infinite;
+}

@@ -1,0 +1,63 @@
+/* Ocean biome */
+
+.planet-core[data-biome="ocean"] .planet-base {
+    background:
+        radial-gradient(circle at 30% 28%,
+            rgba(255,255,255,0.55) 0%,
+            rgba(255,255,255,0.18) 10%,
+            rgba(255,255,255,0.00) 22%),
+        radial-gradient(circle at 40% 35%,
+            #3db0d6 0%,
+            #1f6fa8 42%,
+            #12395f 74%,
+            #08111c 100%);
+}
+
+.planet-core[data-biome="ocean"] .planet-texture {
+    background:
+        radial-gradient(circle at 40% 60%, rgba(40, 150, 100, 0.42) 0%, transparent 17%),
+        radial-gradient(circle at 59% 52%, rgba(56, 170, 110, 0.28) 0%, transparent 12%),
+        radial-gradient(circle at 63% 38%, rgba(255,255,255,0.28) 0%, transparent 12%),
+        radial-gradient(circle at 46% 42%, rgba(255,255,255,0.16) 0%, transparent 10%);
+    left: -14%;
+    width: 130%;
+    height: 100%;
+    opacity: 0.74;
+    animation: ocean-land-drift 20s linear infinite;
+}
+
+.planet-core[data-biome="ocean"] .planet-feature {
+    background:
+        radial-gradient(circle at 28% 34%, rgba(255,255,255,0.20) 0%, transparent 14%),
+        radial-gradient(circle at 62% 48%, rgba(255,255,255,0.14) 0%, transparent 12%),
+        radial-gradient(circle at 52% 68%, rgba(255,255,255,0.10) 0%, transparent 10%);
+    mix-blend-mode: screen;
+    left: -20%;
+    width: 140%;
+    height: 100%;
+    opacity: 0.58;
+    animation: ocean-cloud-drift 12s linear infinite;
+}
+
+.planet-core[data-biome="ocean"] .planet-rim-light {
+    opacity: 1;
+}
+
+.planet-core[data-biome="ocean"] .planet-highlight {
+    opacity: 1;
+     filter: blur(0.3px);
+}
+
+.planet-core[data-biome="ocean"] .planet-feature {
+    opacity: 0.66;
+}
+
+@keyframes ocean-land-drift {
+    0%, 100% { transform: translateX(-5%); }
+    50%      { transform: translateX(5%); }
+}
+
+@keyframes ocean-cloud-drift {
+    0%, 100% { transform: translateX(-9%); }
+    50%      { transform: translateX(9%); }
+}

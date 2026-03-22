@@ -1,0 +1,48 @@
+/* Dead biome */
+
+.planet-core[data-biome="dead"] .planet-base {
+    background:
+        radial-gradient(circle at 30% 28%,
+            rgba(255,255,255,0.62) 0%,
+            rgba(255,255,255,0.16) 10%,
+            rgba(255,255,255,0.00) 24%),
+        radial-gradient(circle at 38% 35%,
+            #9ca3af 0%,
+            #6b7280 42%,
+            #374151 72%,
+            #020617 100%);
+    box-shadow:
+        inset -16px -22px 28px rgba(0, 0, 0, 0.55),
+        inset 6px 6px 12px rgba(255, 255, 255, 0.04);
+}
+
+.planet-core[data-biome="dead"] .planet-texture {
+    background:
+        radial-gradient(circle at 66% 34%, rgba(36, 36, 36, 0.36) 0%, transparent 16%),
+        radial-gradient(circle at 48% 62%, rgba(22, 22, 22, 0.26) 0%, transparent 18%),
+        radial-gradient(circle at 34% 46%, rgba(168, 172, 180, 0.12) 0%, transparent 18%),
+        radial-gradient(circle at 72% 68%, rgba(20, 20, 20, 0.18) 0%, transparent 12%);
+    opacity: 0.62;
+}
+
+.planet-core[data-biome="dead"] .planet-feature {
+    background:
+        radial-gradient(circle at 64% 36%, rgba(20, 20, 20, 0.42) 0%, rgba(20,20,20,0.16) 8%, transparent 16%),
+        radial-gradient(circle at 46% 63%, rgba(12, 12, 12, 0.28) 0%, transparent 14%),
+        radial-gradient(circle at 29% 48%, rgba(210, 214, 220, 0.08) 0%, transparent 10%);
+    mix-blend-mode: multiply;
+    opacity: 0.82;
+}
+
+.planet-core[data-biome="dead"] .planet-rim-light {
+    opacity: 0.45;
+}
+
+.planet-core[data-biome="dead"] .planet-highlight {
+    opacity: 0.55;
+    animation: highlight-breathe 8s ease-in-out infinite;
+}
+
+.planet-core[data-biome="dead"] .planet-shadow {
+    opacity: 0.88;
+}

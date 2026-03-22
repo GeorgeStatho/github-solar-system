@@ -1,0 +1,67 @@
+/* Gas biome */
+
+.planet-core[data-biome="gas"] .planet-base {
+    background:
+        radial-gradient(circle at 30% 28%,
+            rgba(255,255,255,0.46) 0%,
+            rgba(255,255,255,0.14) 10%,
+            rgba(255,255,255,0.00) 22%),
+        radial-gradient(circle at 40% 35%,
+            #d48a54 0%,
+            #9b5d31 44%,
+            #5b3017 74%,
+            #0d1018 100%);
+}
+
+.planet-core[data-biome="gas"] .planet-texture {
+    background:
+        repeating-linear-gradient(
+            180deg,
+            rgba(255,246,224,0.16) 0px,
+            rgba(255,246,224,0.16) 6px,
+            rgba(232,170,100,0.22) 6px,
+            rgba(232,170,100,0.22) 16px,
+            rgba(137,72,34,0.24) 16px,
+            rgba(137,72,34,0.24) 28px,
+            rgba(255,224,190,0.14) 28px,
+            rgba(255,224,190,0.14) 36px
+        );
+    top: -14%;
+    left: 0;
+    width: 100%;
+    height: 128%;
+    opacity: 0.86;
+    animation: gas-band-drift 12s linear infinite;
+}
+
+.planet-core[data-biome="gas"] .planet-feature {
+    background:
+        radial-gradient(ellipse at 67% 60%, rgba(150, 45, 20, 0.44) 0%, rgba(150,45,20,0.22) 10%, transparent 18%);
+    mix-blend-mode: multiply;
+    left: -8%;
+    width: 116%;
+    height: 100%;
+    animation: gas-storm-drift 16s linear infinite;
+}
+
+.planet-core[data-biome="gas"] .planet-rim-light {
+    opacity: 0.84;
+}
+
+.planet-core[data-biome="gas"] .planet-highlight {
+    opacity: 0.76;
+}
+
+.planet-core[data-biome="gas"] .planet-shadow {
+    opacity: 0.82;
+}
+
+@keyframes gas-band-drift {
+    0%, 100% { transform: translateY(-6%); }
+    50%      { transform: translateY(6%); }
+}
+
+@keyframes gas-storm-drift {
+    0%, 100% { transform: translateX(-4%); }
+    50%      { transform: translateX(4%); }
+}

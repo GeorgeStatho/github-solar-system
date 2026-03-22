@@ -1,0 +1,83 @@
+.planet-core[data-biome="crystal"] .planet-base {
+    background:
+        radial-gradient(circle at 30% 28%,
+            rgba(255,255,255,0.46) 0%,
+            rgba(255,255,255,0.12) 12%,
+            rgba(255,255,255,0.00) 24%),
+        radial-gradient(circle at 40% 35%,
+            #6d63d9 0%,
+            #3f3e88 42%,
+            #231f4e 74%,
+            #060814 100%);
+}
+
+.planet-core[data-biome="crystal"] .planet-texture {
+    background:
+        linear-gradient(
+            145deg,
+            transparent 0%,
+            rgba(210,220,255,0.00) 18%,
+            rgba(210,220,255,0.18) 24%,
+            rgba(255,255,255,0.06) 28%,
+            rgba(210,220,255,0.00) 34%,
+            transparent 100%
+        ),
+        linear-gradient(
+            35deg,
+            transparent 0%,
+            rgba(170,220,255,0.00) 42%,
+            rgba(170,220,255,0.16) 48%,
+            rgba(255,255,255,0.05) 52%,
+            rgba(170,220,255,0.00) 58%,
+            transparent 100%
+        ),
+        radial-gradient(circle at 64% 34%, rgba(255,255,255,0.10) 0%, transparent 10%),
+        radial-gradient(circle at 42% 66%, rgba(190,220,255,0.10) 0%, transparent 12%);
+    left: -10%;
+    width: 122%;
+    height: 100%;
+    opacity: 0.78;
+    animation: crystal-facet-drift 20s linear infinite;
+}
+
+.planet-core[data-biome="crystal"] .planet-feature {
+    background:
+        linear-gradient(
+            120deg,
+            transparent 0%,
+            rgba(255,255,255,0.00) 20%,
+            rgba(220,245,255,0.24) 28%,
+            rgba(255,255,255,0.08) 32%,
+            rgba(220,245,255,0.00) 40%,
+            transparent 100%
+        );
+    mix-blend-mode: screen;
+    opacity: 0.72;
+    left: -16%;
+    width: 132%;
+    height: 100%;
+    animation: crystal-glint 8s ease-in-out infinite;
+}
+
+.planet-core[data-biome="crystal"] .planet-rim-light {
+    opacity: 0.94;
+}
+
+.planet-core[data-biome="crystal"] .planet-highlight {
+    opacity: 0.92;
+    filter: blur(0.2px);
+}
+
+.planet-core[data-biome="crystal"] .planet-shadow {
+    opacity: 0.84;
+}
+
+@keyframes crystal-facet-drift {
+    from { transform: translateX(0%); }
+    to   { transform: translateX(7%); }
+}
+
+@keyframes crystal-glint {
+    0%, 100% { transform: translateX(0%); opacity: 0.34; }
+    50%      { transform: translateX(12%); opacity: 0.88; }
+}
