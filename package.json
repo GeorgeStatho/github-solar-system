@@ -2,8 +2,17 @@
   "name": "github-solar-system",
   "version": "0.1.0",
   "description": "Reusable GitHub repository solar system data builder and React renderer",
+  "author": "georgestatho",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgeStatho/github-solar-system.git"
+  },
+  "homepage": "https://github.com/GeorgeStatho/github-solar-system#readme",
+  "bugs": {
+    "url": "https://github.com/GeorgeStatho/github-solar-system/issues"
+  },
   "keywords": [
     "github",
     "react",
