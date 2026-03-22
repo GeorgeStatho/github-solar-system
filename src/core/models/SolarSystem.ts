@@ -2,10 +2,12 @@ import { Planet } from "./Planet";
 import { RepoData, UserData } from "../types";
 
 export class SolarSystem{
+    name:string;
     planets:Planet[];
     user:UserData;
 
     constructor(user:UserData, repos:RepoData[]=[]){
+        this.name = user.name;
         this.planets=[];
         this.user={
             name:user.name,

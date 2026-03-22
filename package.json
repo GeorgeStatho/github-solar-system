@@ -45,7 +45,7 @@
     "typescript": "^5.7.0"
   },
   "scripts": {
-    "build": "node ./node_modules/tsup/dist/cli-default.js src/index.ts src/react.ts --dts --format esm --outDir dist --loader .css=copy && node ./scripts/prepareStyles.mjs",
+    "build": "node ./node_modules/tsup/dist/cli-default.js src/index.ts src/react.ts --dts --format esm --outDir dist --loader .css=copy --clean && node ./scripts/prepareStyles.mjs",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build"
   }

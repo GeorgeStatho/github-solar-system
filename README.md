@@ -5,7 +5,6 @@
 It provides:
 - core types for GitHub-style solar-system data
 - a builder that turns plain data into a `SolarSystem` model
-- a GitHub adapter that fetches a user's repo data and builds the model
 - a React renderer for displaying the system
 - packaged CSS for the default visuals, labels, moons, and biome styles
 
@@ -40,7 +39,6 @@ Core entry:
 ```ts
 import {
   createSolarSystemData,
-  mapGitHubReposToSolarSystem,
   type BranchData,
   type RepoData,
   type UserData,
@@ -91,27 +89,6 @@ const system = createSolarSystemData(data);
 ```
 
 Then render it:
-
-```tsx
-import { RenderSolarSystem } from "github-solar-system/react";
-import "github-solar-system/styles.css";
-
-export function App() {
-  return <RenderSolarSystem system={system} />;
-}
-```
-
-### 2. Build directly from GitHub
-
-Use the built-in GitHub adapter if you want the package to fetch and map a GitHub user's repositories.
-
-```ts
-import { mapGitHubReposToSolarSystem } from "github-solar-system";
-
-const system = await mapGitHubReposToSolarSystem("octocat");
-```
-
-Then render:
 
 ```tsx
 import { RenderSolarSystem } from "github-solar-system/react";
@@ -181,11 +158,11 @@ That stylesheet pulls in:
 - sun styling
 - biome CSS
 
-## Important Note About GitHub Fetching
+## Important Note About GitHub Data
 
-The current GitHub adapter uses the package's GitHub fetch layer and expects a working GitHub API path/config in the host app.
+This package expects you to provide repo data yourself.
 
-In practice, the safest setup is:
+In practice, the safest setup is to:
 - fetch GitHub data server-side or behind your own proxy
 - normalize it into `SolarSystemData`
 - pass it through `createSolarSystemData(...)`
@@ -207,8 +184,7 @@ It does not currently expose:
 
 ```ts
 import {
-  createSolarSystemData,
-  mapGitHubReposToSolarSystem
+  createSolarSystemData
 } from "github-solar-system";
 
 import { RenderSolarSystem } from "github-solar-system/react";

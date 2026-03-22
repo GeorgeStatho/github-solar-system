@@ -1,6 +1,6 @@
 import {
   scaleLog
-} from "./chunk-GWDUBMQX.js";
+} from "./chunk-6GIA5QFT.js";
 
 // src/react.ts
 import "./styles-F2YWWC2P.css";
